@@ -8,7 +8,9 @@ st.markdown("I am a fine-tuned AI assistant trained to respond with empathy.")
 
 @st.cache_resource
 def load_model():
-    model_path = "./mental_health_chatbot_model" 
+    
+    model_path = "Rumanoo/mental-health-chatbot" 
+    
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForCausalLM.from_pretrained(model_path)
     return tokenizer, model
